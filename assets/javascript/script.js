@@ -129,29 +129,15 @@ function getHourDiv(tense, hourIndex, scheduleData) {
   if (scheduleText == null) {
     scheduleText = "";
   }
-  var divHtmlSave = `<div class="row justify-content-center">
-    <div class="col-md-2 time-column">
-      <p>${timeLabel}</p>
-    </div>
-    <div class="col-md-9 details-column ${tense}">
-    <input class="form-control input-style ${pastInput}" type="text" readonly data-hour="${hourIndex}"  value="${scheduleText}"/>
-    </div>
-    <div class="col-md-1 button-column">
-      <button class="btn-primary edit-button" ${buttonState} data-hour="${hourIndex}">
-        <img src="./assets/images/icons/lock-fill.svg" width="32" height="32" data-hour="${hourIndex}" data-lock="lock" />
-      </button>
-    </div>
-  </div>`;
   var divHtml = `<div class="row justify-content-center">
     <div class="col-md-2 time-column">
       <p>${timeLabel}</p>
     </div>
     <div class="col-md-9 details-column ${tense}">
-    <input class="form-control input-style ${pastInput}" type="text" readonly data-hour="${hourIndex}"  value="${scheduleText}"/>
+      <input class="form-control input-style ${pastInput}" type="text" readonly data-hour="${hourIndex}"  value="${scheduleText}"/>
     </div>
     <div class="col-md-1 button-column">
-      <button class="btn-primary edit-button" ${buttonState} data-hour="${hourIndex}">
-      </button>
+      <button class="btn-primary edit-button" ${buttonState} data-hour="${hourIndex}"></button>
     </div>
   </div>`;
   return $(divHtml);
